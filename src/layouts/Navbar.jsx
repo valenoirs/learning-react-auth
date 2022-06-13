@@ -1,6 +1,9 @@
 import {NavLink} from 'react-router-dom'
+import useAuth from '../hooks/useAuth'
 
-function Navbar({token, onLogout}) {
+function Navbar() {
+    const {token, onLogout} = useAuth()
+
     return (
         <nav>
             <NavLink to='/'>Home</NavLink>

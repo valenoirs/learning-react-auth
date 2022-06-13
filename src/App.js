@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {Routes, Route} from 'react-router-dom'
-import { useState } from 'react';
 
 // Style
 import './App.css';
@@ -11,38 +10,23 @@ import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import NotFound from './pages/NotFound'
 
-// Utils
-import fakeAuth from './utils/fakeAuth'
-
 // Context
-import AuthContext from './context/AuthContext'
+import AuthProvider from './context/AuthProvider'
 
 function App() {
-  const [token, setToken] = useState(null)
-
-  const handleLogin = async () => {
-    const token = await fakeAuth()
-    console.log(token)
-    setToken(token)
-  }
-
-  const handleLogout = () => {
-    setToken(null)
-  }
-
-  return (
-    <AuthContext.Provider value={token}>
+    return (
+    <AuthProvider>
       <main>
-        <Navbar token={token} onLogout={handleLogout}/>
+        <Navbar />
         <Routes>
-          <Route index element={<Home onLogin={handleLogin}/>}/>
+          <Route index element={<Home />}/>
           <Route path='dashboard' element={<Dashboard />}/>
 
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
-    </AuthContext.Provider>
-  );
+    </AuthProvider>
+  )
 }
 
 export default App;
