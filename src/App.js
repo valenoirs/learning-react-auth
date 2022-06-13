@@ -14,6 +14,9 @@ import NotFound from './pages/NotFound'
 // Utils
 import fakeAuth from './utils/fakeAuth'
 
+// Context
+import AuthContext from './context/AuthContext'
+
 function App() {
   const [token, setToken] = useState(null)
 
@@ -28,15 +31,17 @@ function App() {
   }
 
   return (
-    <main>
-      <Navbar token={token} onLogout={handleLogout}/>
-      <Routes>
-        <Route index element={<Home onLogin={handleLogin}/>}/>
-        <Route path='dashboard' element={<Dashboard />}/>
+    <AuthContext.Provider value={token}>
+      <main>
+        <Navbar token={token} onLogout={handleLogout}/>
+        <Routes>
+          <Route index element={<Home onLogin={handleLogin}/>}/>
+          <Route path='dashboard' element={<Dashboard />}/>
 
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </main>
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </main>
+    </AuthContext.Provider>
   );
 }
 
