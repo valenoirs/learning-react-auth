@@ -8,6 +8,7 @@ function Navbar() {
         <nav>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/dashboard'>Dashboard</NavLink>
+            <NavLink to='/admin'>Admin</NavLink>
 
             {token && (
                 <button type='button' onClick={onLogout}>

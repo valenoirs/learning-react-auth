@@ -8,6 +8,7 @@ import './App.css';
 import Navbar from './layouts/Navbar'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
+import Admin from './pages/Admin'
 import NotFound from './pages/NotFound'
 import ProtectedRoute from './utils/ProtectedRoute'
 
@@ -24,6 +25,11 @@ function App() {
           <Route path='dashboard' element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }/>
+          <Route path='admin' element={
+            <ProtectedRoute>
+              <Admin />
             </ProtectedRoute>
           }/>
 
