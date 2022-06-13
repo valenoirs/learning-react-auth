@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/learning-react-auth/static/css/main.97eef988.css",
-    "main.js": "/learning-react-auth/static/js/main.315840be.js",
+    "main.js": "/learning-react-auth/static/js/main.a4c3a14d.js",
     "static/js/787.10037d6c.chunk.js": "/learning-react-auth/static/js/787.10037d6c.chunk.js",
     "index.html": "/learning-react-auth/index.html",
     "main.97eef988.css.map": "/learning-react-auth/static/css/main.97eef988.css.map",
-    "main.315840be.js.map": "/learning-react-auth/static/js/main.315840be.js.map",
+    "main.a4c3a14d.js.map": "/learning-react-auth/static/js/main.a4c3a14d.js.map",
     "787.10037d6c.chunk.js.map": "/learning-react-auth/static/js/787.10037d6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97eef988.css",
-    "static/js/main.315840be.js"
+    "static/js/main.a4c3a14d.js"
   ]
 }
